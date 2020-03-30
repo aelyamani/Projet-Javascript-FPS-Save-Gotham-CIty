@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="../librairies/fontawesome-free-5.12.1-web/css/all.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Save Gotham City</title>
+</head>
+
+<body>
+    <header>
+        <div class="titleBar">
+            <h1 class="title">
+                <img id="logo" src="image/logo.png" alt="logo">
+                Save Gotham City
+            </h1>
+        </div>
+    </header>
+
+    <div id="game">
+        <div id="map"></div>
+        <div id="panel">
+            <div id="info">
+                <img id="img" src="image/joker.png" alt="avatar of player">
+                <h3><span id="name"></span></h3>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-4 ml-2 mr-2">
+                            <p>Health :</p>
+                        </div>
+                        <div class="col-xs-8 progress-bar" style="background-color: white; float: right;">
+
+                            <div id="health" class="progress-bar-value far fa-heart"></div>
+                            <div id="barHealth" class="progress-bar-fill"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="div-tst">
+                    <p>Weapon : <span id="weapon"><img id="weaponImg" src="image/brassKnuckles.png"
+                                alt="weapon icon"></span></p>
+                    <p>Damage : <i class="fas fa-bolt mr-1" style="color: white;"></i><span id="damage"></span>
+                    </p>
+                </div>
+            </div>
+            <div id="action">
+                <h3 class="fightControl">Fight control</h3>
+                <button id="attack"><i class="far fa-hand-rock mr-1 attackIcon"></i>Attack</button>
+                <button id="defend"><i class="fas fa-shield-alt mr-1 defendIcon"></i>Defend</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="js/weapon.class.js"></script>
+    <script src="js/player.class.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/interfacePlayer.class.js"></script>
+    <script src="js/square.class.js"></script>
+    <script src="js/wall.class.js"></script>
+    <script src="js/map.class.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
