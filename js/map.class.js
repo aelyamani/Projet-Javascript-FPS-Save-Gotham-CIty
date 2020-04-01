@@ -1,5 +1,4 @@
 class Map {
-
     constructor(mapGameId, player1, player2) {
         this.mapGame = document.getElementById(mapGameId);
         this.width = 10;
@@ -16,6 +15,7 @@ class Map {
         this.initWalls(15); /* on execute les obstacles et on en demande 15 */
         interfacePlayer.updateInterface(this.whoCanPlay);
         this.playerNear();
+        
     }
 
 
