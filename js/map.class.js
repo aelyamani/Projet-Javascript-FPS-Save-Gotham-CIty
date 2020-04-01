@@ -1,5 +1,4 @@
 class Map {
-
     constructor(mapGameId, player1, player2) {
         this.mapGame = document.getElementById(mapGameId);
         this.width = 10;
@@ -52,23 +51,27 @@ class Map {
     }
 
 
-    setElements(elts) { /* la phase ou l on place les elt aleatoirement */
-        let x, y, line, keeplooping, square;
+    setElements(elements) { /* la phase ou l on place les elt aleatoirement */
+        let x;
+        let y;
+        let row;
+        let search;
+        let square;
 
-        elts.forEach((elt) => {
+        elements.forEach((element) => {
 
-            keeplooping = true;
-            while (keeplooping) {  /* pour chaque elts, il tourne en boucle jusqu a qu ils tombent sur une case vide  */
+            search = true;
+            while (search) {  /* pour chaque elements, il tourne en boucle jusqu a qu ils tombent sur une case vide  */
                 x = Math.round(Math.random() * (this.width - 1)); /* fonction aleatoire */
                 y = Math.round(Math.random() * (this.height - 1));
-                line = map.rows[y]; /* la ligne correspond a un range de square */
-                square = line[x];
+                row = map.rows[y]; /* la ligne correspond a un range de square */
+                square = row[x];
                 if (square.empty) {
-                    if (!(elt.content === 'player' && this.playerNear(x, y))) {
-                        square.isOccupied(elt);
-                        elt.x = x;
-                        elt.y = y;
-                        keeplooping = false; /* la boucle s arrete lorsque la case est occupee */
+                    if (!(element.content === 'player' && this.playerNear(x, y))) {
+                        square.isOccupied(element);
+                        element.x = x;
+                        element.y = y;
+                        search = false; /* la boucle s arrete lorsque la case est occupee */
                     }
                 }
             }
