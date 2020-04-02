@@ -64,7 +64,7 @@ img {
     -webkit-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
-    background-color: #DAA520;
+    background-color: #247B38;
 }
 
 #attack {
@@ -120,6 +120,11 @@ img {
     background-color: #DAA520;
 }
 
+.batman,
+h3 {
+    font-size: 1.75rem;
+    color: #5d5b5b;
+}
 
 .info2 {
     width: 300px;
@@ -134,6 +139,12 @@ img {
     -moz-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
     background-color: #DAA520;
+}
+
+.joker,
+h3 {
+    font-size: 1.75rem;
+    color: #247B38;
 }
 
 #panel {
@@ -178,6 +189,14 @@ img {
 .progress-bar-fill {
     height: 100%;
     transition: width 0.5s;
+}
+
+#barHealth1 {
+    background-color: #5d5b5b;
+}
+
+#barHealth2 {
+    background-color: #247B38;
 }
 
 .progress-bar-value {
