@@ -51,7 +51,7 @@ class Map {
     }
 
 
-    setElements(elements) { /* la phase ou l on place les elt aleatoirement */
+    setElements(elements) { /* la phase ou l on place les elemen aleatoirement */
         let x;
         let y;
         let row;
@@ -147,7 +147,7 @@ class Map {
                     this.clickableSquares.push(this.rows[newY][newX]);
                     this.rows[newY][newX].youCanClick = true;
                     if (!this.rows[newY][newX].weapon) {
-                        this.rows[newY][newX].elt.style.background = this.whoCanPlay.color;
+                        this.rows[newY][newX].element.style.background = this.whoCanPlay.color;
                     }
                 } else {
                     break;
