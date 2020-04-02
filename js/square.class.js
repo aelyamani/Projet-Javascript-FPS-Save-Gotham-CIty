@@ -25,7 +25,7 @@ class Square {
             }
             if (this.youCanClick === true) {
                 map.whoCanPlay.move(this);
-                map.switchTurn();
+                map.switchPlayer();
             }
         });
     }

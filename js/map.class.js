@@ -173,7 +173,7 @@ class Map {
     }
 
 
-    switchTurn() {
+    switchPlayer() {
         this.changeWhoCanPlay();
         this.initClickableSquares();
     }
@@ -184,7 +184,7 @@ class Map {
             this.gameOver = true;
             alert(`${playerAttacked.name} a perdu`);
         } else {
-            this.switchTurn();
+            this.switchPlayer();
         }
 
     }
