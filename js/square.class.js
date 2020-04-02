@@ -37,8 +37,8 @@ class Square {
             this.weapon = occupy;
             this.occupy = false;
         }
-        this.element.style.backgroundImage = 'url(' + occupy.img + ')';
-        this.element.style.backgroundColor = 'white';
+        $(this.element).css('background-image', 'url(' + occupy.img + ')');
+        $(this.element).css('background-color', 'white');
         this.empty = false;
     }
 
@@ -53,10 +53,10 @@ class Square {
 
 
     noClick(playerHasLeft) {
-        this.element.style.backgroundSize = '50px 50px ';
+        $(this.element).css('background-size', '50px 50px');
         this.youCanClick = false;
         if ((playerHasLeft === true || this.occupy === false) && !this.weapon) {
-            this.element.style.backgroundImage = 'url("image/bkg.png")';
+            $(this.element).css('background-image', 'url(image/bkg.png)');
         }
     }
 
