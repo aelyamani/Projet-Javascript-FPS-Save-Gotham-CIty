@@ -80,7 +80,7 @@ class Map {
 
 
     playerNear(x, y) {
-        let isNearBy = false;
+        let playerNear = false;
         let newX;
         let newY;
         ['left', 'right', 'up', 'down'].forEach(directions => { /* pr chaque dir (fct) nouvelle ( new) */
@@ -101,10 +101,10 @@ class Map {
                     break;
             }
             if (newX >= 0 && newX <= this.width - 1 && newY >= 0 && newY <= this.height - 1 && map.rows[newY][newX].occupy.health) {
-                isNearBy = true;
+                playerNear = true;
             }
         });
-        return isNearBy;
+        return playerNear;
     }
 
 
