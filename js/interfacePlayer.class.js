@@ -1,7 +1,7 @@
 class InterfacePlayer {
 
     constructor(img, name, health, weapon, damage, attack, defend) {
-        this.imgElt = $('#' + img);
+        this.imgElt = $('.' + img + name);
         this.nameElt = $('#' + name);
         this.healthElt = $('#' + health);
         this.weaponElt = $('#' + weapon);
