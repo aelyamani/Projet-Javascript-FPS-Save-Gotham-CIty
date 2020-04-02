@@ -48,7 +48,7 @@ $('#defend').on('click', function () {
     const player = map.whoCanPlay;
     if (player.defendIt === false) {
         player.defendIt = true;
-        map.switchTurn();
+        map.switchPlayer();
     } else {
         alert('Vous ne pouvez pas vous défendre');
     }

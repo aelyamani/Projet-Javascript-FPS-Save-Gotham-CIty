@@ -1,5 +1,4 @@
 class Map {
-
     constructor(mapGameId, player1, player2) {
         this.mapGame = document.getElementById(mapGameId);
         this.width = 10;
@@ -52,23 +51,27 @@ class Map {
     }
 
 
-    setElements(elts) { /* la phase ou l on place les elt aleatoirement */
-        let x, y, line, keeplooping, square;
+    setElements(elements) { /* la phase ou l on place les elemen aleatoirement */
+        let x;
+        let y;
+        let row;
+        let search;
+        let square;
 
-        elts.forEach((elt) => {
+        elements.forEach((element) => {
 
-            keeplooping = true;
-            while (keeplooping) {  /* pour chaque elts, il tourne en boucle jusqu a qu ils tombent sur une case vide  */
+            search = true;
+            while (search) {  /* pour chaque elements, il tourne en boucle jusqu a qu ils tombent sur une case vide  */
                 x = Math.round(Math.random() * (this.width - 1)); /* fonction aleatoire */
                 y = Math.round(Math.random() * (this.height - 1));
-                line = map.rows[y]; /* la ligne correspond a un range de square */
-                square = line[x];
+                row = map.rows[y]; /* la ligne correspond a un range de square */
+                square = row[x];
                 if (square.empty) {
-                    if (!(elt.content === 'player' && this.playerNear(x, y))) {
-                        square.isOccupied(elt);
-                        elt.x = x;
-                        elt.y = y;
-                        keeplooping = false; /* la boucle s arrete lorsque la case est occupee */
+                    if (!(element.content === 'player' && this.playerNear(x, y))) {
+                        square.isOccupied(element);
+                        element.x = x;
+                        element.y = y;
+                        search = false; /* la boucle s arrete lorsque la case est occupee */
                     }
                 }
             }
@@ -77,7 +80,7 @@ class Map {
 
 
     playerNear(x, y) {
-        let isNearBy = false;
+        let playerNear = false;
         let newX;
         let newY;
         ['left', 'right', 'up', 'down'].forEach(directions => { /* pr chaque dir (fct) nouvelle ( new) */
@@ -98,10 +101,10 @@ class Map {
                     break;
             }
             if (newX >= 0 && newX <= this.width - 1 && newY >= 0 && newY <= this.height - 1 && map.rows[newY][newX].occupy.health) {
-                isNearBy = true;
+                playerNear = true;
             }
         });
-        return isNearBy;
+        return playerNear;
     }
 
 
@@ -144,7 +147,7 @@ class Map {
                     this.clickableSquares.push(this.rows[newY][newX]);
                     this.rows[newY][newX].youCanClick = true;
                     if (!this.rows[newY][newX].weapon) {
-                        this.rows[newY][newX].elt.style.background = this.whoCanPlay.color;
+                        this.rows[newY][newX].element.style.background = this.whoCanPlay.color;
                     }
                 } else {
                     break;
@@ -170,7 +173,7 @@ class Map {
     }
 
 
-    switchTurn() {
+    switchPlayer() {
         this.changeWhoCanPlay();
         this.initClickableSquares();
     }
@@ -181,7 +184,7 @@ class Map {
             this.gameOver = true;
             alert(`${playerAttacked.name} a perdu`);
         } else {
-            this.switchTurn();
+            this.switchPlayer();
         }
 
     }

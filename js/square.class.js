@@ -1,44 +1,44 @@
 class Square {
 
     constructor(elementHTML, x, y) {
-        this.init(elementHTML, x, y);
+        this.initSettings(elementHTML, x, y);
         this.empty = true; /* le carre est vide */
         this.youCanClick = false;
         this.occupy = false;
     }
 
 
-    init(elementHTML, x, y) { /* on lui donne une valeur x et y */
-        this.elt = elementHTML;
+    initSettings(elementHTML, x, y) { /* on lui donne une valeur x et y */
+        this.element = elementHTML;
         this.x = x;
         this.y = y;
         this.listenClick(); // on lance cette fonction qui cree un event cliquable
-        this.elt.style.backgroundImage = 'url(image/bkg.png)';
+        $(this.element).css('background-image', 'url(image/bkg.png)');
     }
 
 
     listenClick() {
-        $(this.elt).on('click', e => {
+        $(this.element).on('click', e => {
             if (map.gameOver) {
                 map.restartGame();
                 return;
             }
             if (this.youCanClick === true) {
                 map.whoCanPlay.move(this);
-                map.switchTurn();
+                map.switchPlayer();
             }
         });
     }
 
 
-    isOccupied(occupy) { /* pour eviter que les elts se superposent */
+    isOccupied(occupy) { /* pour eviter que les elements se superposent */
         this.occupy = occupy;
         if (occupy.content === "weapon") {
             this.weapon = occupy;
             this.occupy = false;
         }
-        this.elt.style.backgroundImage = 'url(' + occupy.img + ')';
-        this.elt.style.backgroundColor = 'white';
+        $(this.element).css('background-image', 'url(' + occupy.img + ')');
+        $(this.element).css('background-color', 'white');
         this.empty = false;
     }
 
@@ -52,11 +52,11 @@ class Square {
     }
 
 
-    noClick(playerHasLeft) {
-        this.elt.style.backgroundSize = '50px 50px ';
+    noClick(playerLeft) {
+        $(this.element).css('background-size', '50px 50px');
         this.youCanClick = false;
-        if ((playerHasLeft === true || this.occupy === false) && !this.weapon) {
-            this.elt.style.backgroundImage = 'url("image/bkg.png")';
+        if ((playerLeft === true || this.occupy === false) && !this.weapon) {
+            $(this.element).css('background-image', 'url(image/bkg.png)');
         }
     }
 
