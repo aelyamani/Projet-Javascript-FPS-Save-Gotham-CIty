@@ -1,7 +1,8 @@
 class Player {
 
 
-    constructor(name, img, color, health, weapon) {
+    constructor(id, name, img, color, health, weapon) {
+        this.id = id;
         this.name = name;
         this.img = img;
         this.color = color;
@@ -15,13 +16,13 @@ class Player {
     }
 
 
-    move(nextSquare) {  /* deplacements */
+    move(toNextSquare) {  /* deplacements */
         map.rows[this.y][this.x].hasBeenLeft(this); //il a quitte une position x et y
-        map.rows[nextSquare.y][nextSquare.x].isOccupied(this); // pour une nouvelle position
-        this.x = nextSquare.x;
-        this.y = nextSquare.y;
-        if (nextSquare.weapon) { //s'il se place sur une case avec une arme, il la recupere
-            this.getWeaponOnMap(nextSquare);
+        map.rows[toNextSquare.y][toNextSquare.x].isOccupied(this); // pour une nouvelle position
+        this.x = toNextSquare.x;
+        this.y = toNextSquare.y;
+        if (toNextSquare.weapon) { //s'il se place sur une case avec une arme, il la recupere
+            this.getWeaponOnMap(toNextSquare);
         }
     }
 

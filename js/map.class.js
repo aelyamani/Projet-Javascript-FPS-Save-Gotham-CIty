@@ -13,7 +13,8 @@ class Map {
         this.gameOver = false;
         this.initMap(); /* on execute la fonction qui sera vide */
         this.initWalls(15); /* on execute les obstacles et on en demande 15 */
-        interfacePlayer.updateInterface(this.whoCanPlay);
+        interfacePlayer.updateInterfacePlayer1(this.player1);
+        interfacePlayer.updateInterfacePlayer2(this.player2);
         this.playerNear();
     }
 
@@ -51,7 +52,7 @@ class Map {
     }
 
 
-    setElements(elements) { /* la phase ou l on place les elt aleatoirement */
+    setElements(elements) { /* la phase ou l on place les elemen aleatoirement */
         let x;
         let y;
         let row;
@@ -80,7 +81,7 @@ class Map {
 
 
     playerNear(x, y) {
-        let isNearBy = false;
+        let playerNear = false;
         let newX;
         let newY;
         ['left', 'right', 'up', 'down'].forEach(directions => { /* pr chaque dir (fct) nouvelle ( new) */
@@ -101,10 +102,10 @@ class Map {
                     break;
             }
             if (newX >= 0 && newX <= this.width - 1 && newY >= 0 && newY <= this.height - 1 && map.rows[newY][newX].occupy.health) {
-                isNearBy = true;
+                playerNear = true;
             }
         });
-        return isNearBy;
+        return playerNear;
     }
 
 
@@ -147,7 +148,7 @@ class Map {
                     this.clickableSquares.push(this.rows[newY][newX]);
                     this.rows[newY][newX].youCanClick = true;
                     if (!this.rows[newY][newX].weapon) {
-                        this.rows[newY][newX].elt.style.background = this.whoCanPlay.color;
+                        this.rows[newY][newX].element.style.background = this.whoCanPlay.color;
                     }
                 } else {
                     break;
@@ -160,7 +161,9 @@ class Map {
 
     changeWhoCanPlay() { /* fonction pour lancer la partie avec la joueur 1 */
         this.whoCanPlay = this.whoCanPlaySystem();
-        interfacePlayer.updateInterface(this.whoCanPlay);
+        interfacePlayer.updateInterfacePlayer1(this.player1);
+        interfacePlayer.updateInterfacePlayer2(this.player2);
+        colorChange(this.whoCanPlay);
     }
 
 
@@ -173,7 +176,7 @@ class Map {
     }
 
 
-    switchTurn() {
+    switchPlayer() {
         this.changeWhoCanPlay();
         this.initClickableSquares();
     }
@@ -184,7 +187,7 @@ class Map {
             this.gameOver = true;
             alert(`${playerAttacked.name} a perdu`);
         } else {
-            this.switchTurn();
+            this.switchPlayer();
         }
 
     }
