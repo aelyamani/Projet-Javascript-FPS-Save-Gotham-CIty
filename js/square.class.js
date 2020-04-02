@@ -52,10 +52,10 @@ class Square {
     }
 
 
-    noClick(playerHasLeft) {
+    noClick(playerLeft) {
         $(this.element).css('background-size', '50px 50px');
         this.youCanClick = false;
-        if ((playerHasLeft === true || this.occupy === false) && !this.weapon) {
+        if ((playerLeft === true || this.occupy === false) && !this.weapon) {
             $(this.element).css('background-image', 'url(image/bkg.png)');
         }
     }
