@@ -1,7 +1,8 @@
 class Player {
 
 
-    constructor(name, img, color, health, weapon) {
+    constructor(id, name, img, color, health, weapon) {
+        this.id = id;
         this.name = name;
         this.img = img;
         this.color = color;

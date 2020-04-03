@@ -22,40 +22,64 @@
     </header>
 
     <div id="game">
-        <div id="map"></div>
-        <div id="panel">
-            <div id="info">
-                <img id="img" src="image/joker.png" alt="avatar of player">
-                <h3><span id="name"></span></h3>
-                <div class="container">
+        <div class="info1">
+            <div class="infoPlayer1">
+                <img src="image/batman.png" alt="avatar of player">
+                <h3 class="batman">Batman</h3>
+                <div class="health ml-3">
                     <div class="row">
                         <div class="col-xs-4 ml-2 mr-2">
                             <p>Health :</p>
                         </div>
                         <div class="col-xs-8 progress-bar" style="background-color: white; float: right;">
+                            <div id="health1" class="progress-bar-value far fa-heart"></div>
+                            <div id="barHealth1" class="progress-bar-fill"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="otherInformations">
+                    <p>Weapon : <img id="weaponImg1" src="image/brassKnuckles.png" alt="weapon icon">
+                    </p>
+                    <p>Damage : <i class="fas fa-bolt mr-1" style="color: white;"></i><span id="damage1"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
 
-                            <div id="health" class="progress-bar-value far fa-heart"></div>
-                            <div id="barHealth" class="progress-bar-fill"></div>
+        <div id="map"></div>
+
+        <div class="info2">
+            <div class="infoPlayer2">
+                <img src="image/joker.png" alt="avatar of player">
+                <h3 class="joker">Joker</h3>
+                <div class="health ml-3">
+                    <div class="row">
+                        <div class="col-xs-4 ml-2 mr-2">
+                            <p>Health :</p>
+                        </div>
+                        <div class="col-xs-8 progress-bar" style="background-color: white; float: right;">
+                            <div id="health2" class="progress-bar-value far fa-heart"></div>
+                            <div id="barHealth2" class="progress-bar-fill"></div>
                         </div>
                     </div>
 
                 </div>
 
-                <div class="div-tst">
-                    <p>Weapon : <span id="weapon"><img id="weaponImg" src="image/brassKnuckles.png"
-                                alt="weapon icon"></span></p>
-                    <p>Damage : <i class="fas fa-bolt mr-1" style="color: white;"></i><span id="damage"></span>
+                <div class="otherInformations">
+                    <p>Weapon : <img id="weaponImg2" src="image/brassKnuckles.png" alt="weapon icon"></p>
+                    <p>Damage : <i class="fas fa-bolt mr-1" style="color: white;"></i><span id="damage2"></span>
                     </p>
                 </div>
             </div>
-            <div id="action">
-                <h3 class="fightControl">Fight control</h3>
-                <button id="attack"><i class="far fa-hand-rock mr-1 attackIcon"></i>Attack</button>
-                <button id="defend"><i class="fas fa-shield-alt mr-1 defendIcon"></i>Defend</button>
-            </div>
         </div>
-
     </div>
+    <div id="action">
+        <button id="attack"><i class="far fa-hand-rock mr-1 attackIcon"></i>Attack</button>
+        <button id="defend"><i class="fas fa-shield-alt mr-1 defendIcon"></i>Defend</button>
+    </div>
+
+
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
