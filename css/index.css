@@ -3,6 +3,14 @@
     padding: 0;
 }
 
+h3 {
+    font-size: 1.75rem;
+    color: grey;
+    background-color: #DAA520;
+    border-radius: 10px;
+    height: 40px;
+}
+
 /* General Settings
 
 /* Title Bar */
@@ -210,13 +218,4 @@ h3 {
     font-weight: bold;
     padding-top: 2px;
     font-size: 18px;
-}
-
-
-h3 {
-    font-size: 1.75rem;
-    color: grey;
-    background-color: #DAA520;
-    border-radius: 10px;
-    height: 40px;
 }
