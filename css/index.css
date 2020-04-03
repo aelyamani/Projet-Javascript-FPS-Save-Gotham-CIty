@@ -3,6 +3,29 @@
     padding: 0;
 }
 
+h3 {
+    font-size: 1.75rem;
+    color: grey;
+    background-color: #DAA520;
+    border-radius: 10px;
+    height: 40px;
+}
+
+button {
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: 1px;
+    font-size: 17px;
+}
+
+p {
+    text-align: center;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
 /* General Settings
 
 /* Title Bar */
@@ -31,20 +54,7 @@
 
 /* Title Bar */
 
-button {
-    font-family: 'Roboto Condensed', sans-serif;
-    letter-spacing: 1px;
-    font-size: 17px;
-}
 
-p {
-    text-align: center;
-}
-
-img {
-    width: 100px;
-    height: 100px;
-}
 
 
 
@@ -208,13 +218,6 @@ h3 {
     align-items: center;
     justify-content: center;
     font-weight: bold;
-}
-
-
-h3 {
-    font-size: 1.75rem;
-    color: grey;
-    background-color: #DAA520;
-    border-radius: 10px;
-    height: 40px;
+    padding-top: 2px;
+    font-size: 18px;
 }
