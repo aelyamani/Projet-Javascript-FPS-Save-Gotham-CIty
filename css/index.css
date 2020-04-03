@@ -11,6 +11,21 @@ h3 {
     height: 40px;
 }
 
+button {
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: 1px;
+    font-size: 17px;
+}
+
+p {
+    text-align: center;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
 /* General Settings
 
 /* Title Bar */
@@ -39,20 +54,7 @@ h3 {
 
 /* Title Bar */
 
-button {
-    font-family: 'Roboto Condensed', sans-serif;
-    letter-spacing: 1px;
-    font-size: 17px;
-}
 
-p {
-    text-align: center;
-}
-
-img {
-    width: 100px;
-    height: 100px;
-}
 
 
 
