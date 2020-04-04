@@ -1,6 +1,5 @@
 class Player {
 
-
     constructor(id, name, img, color, health, weapon) {
         this.id = id;
         this.name = name;
@@ -52,6 +51,34 @@ class Player {
     }
 
 }
+
+$('#attack').on('click', function () {  /*le click de l'attaque et la defense */
+    if (map.gameOver) {
+        map.restartGame();
+        return;
+    }
+    const player = map.whoCanPlay;
+    if (map.playerNear(player.x, player.y)) {
+        player.attack(map.whoCanPlaySystem());
+    } else {
+        alert('Vous ne pouvez pas attaquer');
+    }
+});
+
+
+$('#defend').on('click', function () {
+    if (map.gameOver) {
+        map.restartGame();
+        return;
+    }
+    const player = map.whoCanPlay;
+    if (player.defendIt === false) {
+        player.defendIt = true;
+        map.switchPlayer();
+    } else {
+        alert('Vous ne pouvez pas vous défendre');
+    }
+});
 
 
 
