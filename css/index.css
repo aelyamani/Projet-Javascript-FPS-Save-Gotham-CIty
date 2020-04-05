@@ -3,9 +3,34 @@
     padding: 0;
 }
 
-/* General Settings
+h3 {
+    font-size: 1.75rem;
+    color: grey;
+    background-color: #DAA520;
+    border-radius: 10px;
+    height: 40px;
+}
 
-/* Title Bar */
+button {
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: 1px;
+    font-size: 17px;
+}
+
+p {
+    text-align: center;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+
+
+/* END GENERAL SETTINGS*/
+
+/* TITLE BAR */
 .titleBar {
     display: block;
     height: 100px;
@@ -29,23 +54,24 @@
 
 }
 
-/* Title Bar */
-
-button {
-    font-family: 'Roboto Condensed', sans-serif;
-    letter-spacing: 1px;
-    font-size: 17px;
+.header {
+    margin-left: 150px;
 }
 
-p {
-    text-align: center;
+
+/* END TITLE BAR */
+
+/* GAME */
+.row {
+    display: flex;
 }
 
-img {
-    width: 100px;
-    height: 100px;
+.square {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    background-size: 50px 50px;
 }
-
 
 
 #game {
@@ -53,6 +79,10 @@ img {
     margin-top: 30px;
     justify-content: center;
 }
+
+/* FIN GAME */
+
+/* INFO PANELS */
 
 #action {
     width: 45%;
@@ -82,6 +112,10 @@ img {
     text-transform: uppercase;
 }
 
+.attackicon {
+    color: grey;
+}
+
 #defend {
     border-radius: 10px;
     font-weight: bold;
@@ -100,9 +134,6 @@ img {
     color: grey;
 }
 
-.attackicon {
-    color: grey;
-}
 
 
 .info1 {
@@ -147,34 +178,12 @@ h3 {
     color: #247B38;
 }
 
-#panel {
-    display: block;
-    margin-left: 50px;
-}
 
 
 .weaponImg {
     width: 50px;
     height: 50px;
 }
-
-
-
-.row {
-    display: flex;
-}
-
-.square {
-    width: 50px;
-    height: 50px;
-    border: 1px solid black;
-    background-size: 50px 50px;
-}
-
-.header {
-    margin-left: 150px;
-}
-
 
 
 .progress-bar {
@@ -186,16 +195,16 @@ h3 {
     border-radius: 15px;
 }
 
-.progress-bar-fill {
-    height: 100%;
-    transition: width 0.5s;
-}
 
 #barHealth1 {
+    height: 100%;
+    transition: width 0.5s;
     background-color: #5d5b5b;
 }
 
 #barHealth2 {
+    height: 100%;
+    transition: width 0.5s;
     background-color: #247B38;
 }
 
@@ -208,13 +217,18 @@ h3 {
     align-items: center;
     justify-content: center;
     font-weight: bold;
+    padding-top: 2px;
+    font-size: 18px;
 }
 
+/* END INFO PANELS */
 
-h3 {
-    font-size: 1.75rem;
-    color: grey;
-    background-color: #DAA520;
-    border-radius: 10px;
-    height: 40px;
+
+/* MODAL*/
+
+.modal-paragraph {
+    font-weight: bold;
+    font-size: 20px;
 }
+
+/* END MODAL */

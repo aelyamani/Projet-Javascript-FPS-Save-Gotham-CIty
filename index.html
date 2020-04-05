@@ -3,8 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-    <link href="../librairies/fontawesome-free-5.12.1-web/css/all.css" rel="stylesheet" />
-    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/index.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+        integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -20,6 +21,51 @@
             </h1>
         </div>
     </header>
+
+    <!-- MODAL LOST PLAYER -->
+
+    <div class="modal fade" id="looseModal" tabindex="-1" role="dialog" aria-labelledby="looseModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header ml-auto mr-auto">
+                    <h5 class="modal-title" style="color: #daa520; font-size: 30px;">Game is over &#128514</h5>
+                </div>
+                <div class="modal-body mr-auto">
+                    <p class="modal-paragraph"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- END MODAL LOST PLAYER -->
+
+    <!-- MODAL RESTART GAME -->
+
+    <div class="modal fade" id="restartGameModal" tabindex="-1" role="dialog" aria-labelledby="restartGameModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header ml-auto mr-auto">
+                    <h5 class="modal-title" style="color: #daa520; font-size: 30px;">Game is over &#128514</h5>
+                </div>
+                <div class="modal-body mr-auto">
+                    <p style="font-size: 20px;">Do you want to replay ?</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="close" type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    <button id="replay" type="button" class="btn btn-success">Replay</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- END MODAL RETART GAME -->
+
+    <!-- GAME -->
 
     <div id="game">
         <div class="info1">
@@ -78,15 +124,16 @@
         <button id="defend"><i class="fas fa-shield-alt mr-1 defendIcon"></i>Defend</button>
     </div>
 
-
-
+    <!-- END GAME -->
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
     <script src="js/weapon.class.js"></script>
     <script src="js/player.class.js"></script>
     <script src="js/functions.js"></script>
-    <script src="js/interfacePlayer.class.js"></script>
     <script src="js/square.class.js"></script>
     <script src="js/wall.class.js"></script>
     <script src="js/map.class.js"></script>

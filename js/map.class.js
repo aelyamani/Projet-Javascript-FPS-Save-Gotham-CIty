@@ -13,8 +13,8 @@ class Map {
         this.gameOver = false;
         this.initMap(); /* on execute la fonction qui sera vide */
         this.initWalls(15); /* on execute les obstacles et on en demande 15 */
-        interfacePlayer.updateInterfacePlayer1(this.player1);
-        interfacePlayer.updateInterfacePlayer2(this.player2);
+        updateInterfacePlayer1(this.player1);
+        updateInterfacePlayer2(this.player2);
         this.playerNear();
     }
 
@@ -161,8 +161,8 @@ class Map {
 
     changeWhoCanPlay() { /* fonction pour lancer la partie avec la joueur 1 */
         this.whoCanPlay = this.whoCanPlaySystem();
-        interfacePlayer.updateInterfacePlayer1(this.player1);
-        interfacePlayer.updateInterfacePlayer2(this.player2);
+        updateInterfacePlayer1(this.player1);
+        updateInterfacePlayer2(this.player2);
         colorChange(this.whoCanPlay);
     }
 
@@ -185,7 +185,9 @@ class Map {
     gameIsOver(playerAttacked) {
         if (playerAttacked.health <= 0) {
             this.gameOver = true;
-            alert(`${playerAttacked.name} a perdu`);
+            $('#looseModal').modal('show');
+            $('.modal-paragraph').html(`${playerAttacked.name} lost`)
+
         } else {
             this.switchPlayer();
         }
@@ -195,10 +197,15 @@ class Map {
 
 
     restartGame() {
-        if (confirm("Voulez-vous rejouer?")) {
+        $('#restartGameModal').modal('show');
+        if ($("#replay").click(function () {
             location.reload();
-        }
+        }));
+
     }
+
+
+
 
 
 

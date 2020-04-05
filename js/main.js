@@ -1,5 +1,3 @@
-let interfacePlayer = new InterfacePlayer('img', 'name', 'health', 'weapon', 'damage');
-
 const player1 = new Player('1', 'Batman', 'image/batman.png', '#5d5b5b', 100, brassKnuckles);
 const player2 = new Player('2', 'Joker', 'image/joker.png', '#247b38', 100, brassKnuckles);
 
