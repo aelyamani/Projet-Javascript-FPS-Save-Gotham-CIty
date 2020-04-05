@@ -185,7 +185,9 @@ class Map {
     gameIsOver(playerAttacked) {
         if (playerAttacked.health <= 0) {
             this.gameOver = true;
-            alert(`${playerAttacked.name} a perdu`);
+            $('#looseModal').modal('show');
+            $('.modal-paragraph').html(`${playerAttacked.name} lost`)
+
         } else {
             this.switchPlayer();
         }
@@ -195,10 +197,15 @@ class Map {
 
 
     restartGame() {
-        if (confirm("Voulez-vous rejouer?")) {
+        $('#restartGameModal').modal('show');
+        if ($("#replay").click(function () {
             location.reload();
-        }
+        }));
+
     }
+
+
+
 
 
 

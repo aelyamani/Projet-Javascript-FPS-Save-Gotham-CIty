@@ -16,36 +16,56 @@
     <header>
         <div class="titleBar">
             <h1 class="title">
-                <img id="logo" src="image/logo.png" alt="logo">s
+                <img id="logo" src="image/logo.png" alt="logo">
                 Save Gotham City
             </h1>
         </div>
     </header>
 
-    <!-- Modal-TEST -->
+    <!-- MODAL LOST PLAYER -->
 
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
+    <div class="modal fade" id="looseModal" tabindex="-1" role="dialog" aria-labelledby="looseModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Modal Header</h4>
+                <div class="modal-header ml-auto mr-auto">
+                    <h5 class="modal-title" style="color: #daa520; font-size: 30px;">Game is over &#128514</h5>
                 </div>
-                <div class="modal-body">
-                    <p>Some text in the modal.</p>
+                <div class="modal-body mr-auto">
+                    <p class="modal-paragraph"></p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                 </div>
             </div>
-
         </div>
     </div>
 
-    <!-- Fin-Modal-TEST -->
+    <!-- END MODAL LOST PLAYER -->
+
+    <!-- MODAL RESTART GAME -->
+
+    <div class="modal fade" id="restartGameModal" tabindex="-1" role="dialog" aria-labelledby="restartGameModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header ml-auto mr-auto">
+                    <h5 class="modal-title" style="color: #daa520; font-size: 30px;">Game is over &#128514</h5>
+                </div>
+                <div class="modal-body mr-auto">
+                    <p style="font-size: 20px;">Do you want to replay ?</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="close" type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    <button id="replay" type="button" class="btn btn-success">Replay</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- END MODAL RETART GAME -->
+
+    <!-- GAME -->
 
     <div id="game">
         <div class="info1">
@@ -104,11 +124,13 @@
         <button id="defend"><i class="fas fa-shield-alt mr-1 defendIcon"></i>Defend</button>
     </div>
 
-
-
+    <!-- END GAME -->
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
     <script src="js/weapon.class.js"></script>
     <script src="js/player.class.js"></script>
     <script src="js/functions.js"></script>
