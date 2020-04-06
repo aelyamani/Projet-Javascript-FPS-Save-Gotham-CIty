@@ -13,7 +13,7 @@ class Square {
         this.x = x;
         this.y = y;
         this.listenClick(); // on lance cette fonction qui cree un event cliquable
-        $(this.element).css('background-image', 'url(image/bkg.png)');
+        $(this.element).css('background-image', 'url(img/bkg.png)');
     }
 
 
@@ -56,7 +56,7 @@ class Square {
         $(this.element).css('background-size', '50px 50px');
         this.youCanClick = false;
         if ((playerLeft === true || this.occupy === false) && !this.weapon) {
-            $(this.element).css('background-image', 'url(image/bkg.png)');
+            $(this.element).css('background-image', 'url(img/bkg.png)');
         }
     }
 
