@@ -9,7 +9,7 @@ class Weapon {
 }
 
 /* les armes du jeu */
-let brassKnuckles = new Weapon('Brass knuckles', 'image/brassKnuckles.png', 5);
-let knife = new Weapon('Knife', 'image/Knife.png', 15);
-let axe = new Weapon('Axe', 'image/Axe.png', 25);
-let gun = new Weapon('Gun', 'image/Gun.png', 45);
+let brassKnuckles = new Weapon('Brass knuckles', 'img/brassKnuckles.png', 5);
+let knife = new Weapon('Knife', 'img/Knife.png', 15);
+let axe = new Weapon('Axe', 'img/Axe.png', 25);
+let gun = new Weapon('Gun', 'img/Gun.png', 45);
